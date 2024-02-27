@@ -1,5 +1,5 @@
 target/
-*.md
+.md
 
 ### IntelliJ IDEA ###
 .idea
