@@ -15,3 +15,4 @@ target/
 ### Allure reports ###
 **/.allure/
 **/allure-results/
+**/allure-report/

@@ -8,23 +8,17 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Test;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.TestMethodOrder;
-
 import static io.restassured.RestAssured.given;
 
 import data.login.officeTestData;
 
 @Epic("Automate API for Office user login")
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class officeUserLogin extends officeTestData {
+public class officeUserLoginTest extends officeTestData {
 
     private static final String officeLoginEndPoint = OFFICE_LOGIN_END_POINT_URL;
 
     @Test
-    @Order(1)
     @Feature("01. TC Verify that the verified Office user can successfully login")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifyOfficeCanSuccessfullyLogin() {
@@ -37,7 +31,6 @@ public class officeUserLogin extends officeTestData {
         verifyThaOfficeLoginSuccessfully(officeLogin);
     }
     @Test
-    @Order(2)
     @Feature("02. TC Verify that verified user can't login with empty email and password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifiedOfficeCanNotLoginWithEmptyData() {
@@ -50,7 +43,6 @@ public class officeUserLogin extends officeTestData {
         verifyThatOfficeLoginUnsuccessfully(officeLogin);
     }
     @Test
-    @Order(3)
     @Feature("03. TC Verify that verified user can't login with valid email and empty password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifiedOfficeCanNotLoginWithValidEmailAndEmptyPassword() {
@@ -63,7 +55,6 @@ public class officeUserLogin extends officeTestData {
         verifyThatOfficeLoginUnsuccessfully(officeLogin);
     }
     @Test
-    @Order(4)
     @Feature("04. TC Verify that verified user can't login with empty email and valid password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifiedOfficeCanNotLoginWithEmptyEmailAndValidPassword() {
@@ -76,7 +67,6 @@ public class officeUserLogin extends officeTestData {
         verifyThatOfficeLoginUnsuccessfully(officeLogin);
     }
     @Test
-    @Order(5)
     @Feature("05. TC Verify that verified user can't login with invalid email and password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifiedOfficeCanNotLoginWithInvalidData() {
@@ -89,7 +79,6 @@ public class officeUserLogin extends officeTestData {
         verifyThatOfficeLoginUnsuccessfully(officeLogin);
     }
     @Test
-    @Order(6)
     @Feature("06. TC Verify that verified user can't login with invalid email and valid password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifiedOfficeCanNotLoginWithInvalidEmailAndValidPassword() {
@@ -102,7 +91,6 @@ public class officeUserLogin extends officeTestData {
         verifyThatOfficeLoginUnsuccessfully(officeLogin);
     }
     @Test
-    @Order(7)
     @Feature("07. TC Verify that verified user can't login with valid email and invalid password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifiedOfficeCanNotLoginWithValidEmailAndInvalidPassword() {
@@ -115,7 +103,6 @@ public class officeUserLogin extends officeTestData {
         verifyThatOfficeLoginUnsuccessfully(officeLogin);
     }
     @Test
-    @Order(8)
     @Feature("08. TC Verify that unverified user can login with valid email and password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheUnverifiedOfficeCanSuccessfullyLogin() {
@@ -128,7 +115,6 @@ public class officeUserLogin extends officeTestData {
         verifyThaOfficeLoginSuccessfully(officeLogin);
     }
     @Test
-    @Order(9)
     @Feature("09. TC Verify that the disabled user can login with a valid email and password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheDisabledOfficeCanSuccessfullyLogin() {

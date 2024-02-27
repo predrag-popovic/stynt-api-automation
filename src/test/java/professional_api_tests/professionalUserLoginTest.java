@@ -9,21 +9,14 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Test;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.TestMethodOrder;
-
 import static io.restassured.RestAssured.*;
 
 @Epic("Automate API for Professional user login")
-
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class professionalUserLogin extends professionalTestData {
+public class professionalUserLoginTest extends professionalTestData {
 
     private static final String professionalLoginEndPoint = PROFESSIONAL_LOGIN_END_POINT_URL;
 
     @Test
-    @Order(1)
     @Feature("01. TC Verify That The Verify Professional user can successfully login")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifyProfessionalCanSuccessfullyLogin() {
@@ -37,7 +30,6 @@ public class professionalUserLogin extends professionalTestData {
     }
 
     @Test
-    @Order(2)
     @Feature("02.TC Verify that verified user can't login with empty email and password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatVerifiedUserCanNotLogInWithEmptyEmailAndPassword() {

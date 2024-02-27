@@ -2,7 +2,7 @@ package data.login;
 
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 
 public class professionalTestData {
 
@@ -40,14 +40,14 @@ public class professionalTestData {
      ********************************************************************************************/
 
     public static void verifyThatProfessionalLoginSuccessfully(Response verifiedProfessionalSuccessfullyLogin) {
-        Assertions.assertEquals(200, verifiedProfessionalSuccessfullyLogin.statusCode());
-        Assertions.assertEquals("PERSONNEL", verifiedProfessionalSuccessfullyLogin.jsonPath().getString("userType"));
-        Assertions.assertEquals("79543", verifiedProfessionalSuccessfullyLogin.jsonPath().getString("userId"));
+        Assert.assertEquals(200, verifiedProfessionalSuccessfullyLogin.statusCode());
+        Assert.assertEquals("PERSONNEL", verifiedProfessionalSuccessfullyLogin.jsonPath().getString("userType"));
+        Assert.assertEquals("79543", verifiedProfessionalSuccessfullyLogin.jsonPath().getString("userId"));
     }
 
     public static void verifyThatVerifiedProfessionalCanNotLoginWithEmptyEmailAndPassword(Response verifiedProfessionalCanNotLogInWithEmptyEmailAndPassword) {
-        Assertions.assertEquals(400, verifiedProfessionalCanNotLogInWithEmptyEmailAndPassword.statusCode());
-        Assertions.assertEquals("User does not exist.", verifiedProfessionalCanNotLogInWithEmptyEmailAndPassword.asString());
+        Assert.assertEquals(400, verifiedProfessionalCanNotLogInWithEmptyEmailAndPassword.statusCode());
+        Assert.assertEquals("User does not exist.", verifiedProfessionalCanNotLogInWithEmptyEmailAndPassword.asString());
     }
 
 }
