@@ -1,0 +1,14 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### MAVEN ###
+.target
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Allure reports ###
+**/.allure/
+**/allure-results/
