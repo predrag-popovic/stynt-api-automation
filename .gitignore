@@ -1,4 +1,5 @@
 target/
+.readme.md
 
 ### IntelliJ IDEA ###
 .idea
