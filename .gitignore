@@ -1,5 +1,5 @@
 target/
-.readme.md
+*.md
 
 ### IntelliJ IDEA ###
 .idea
