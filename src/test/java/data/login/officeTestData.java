@@ -7,10 +7,8 @@ import org.junit.Assert;
 public class officeTestData {
 
     /********************************************************************************************
-     TEST DATA AND ENDPOINT URL THAT WE USE FOR PROFESSIONAL USERS
+     TEST DATA THAT WE USE FOR OFFICE USERS
      ********************************************************************************************/
-
-    public static final  String OFFICE_LOGIN_END_POINT_URL = "https://offices.preprod.stynt.com/app/wapi/v1/login";
     public static final String OFFICE_VERIFIED_EMAIL = "qatestqa75+db1@gmail.com";
     public static final String OFFICE_VERIFIED_PASSWORD = "Gecko123";
     public static final String OFFICE_EMPTY_EMAIL = "";

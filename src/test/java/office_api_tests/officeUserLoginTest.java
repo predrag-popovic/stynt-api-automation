@@ -11,12 +11,15 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
 import data.login.officeTestData;
+import utility.PropertyManager;
 
 @Epic("Automate API for Office user login")
 
 public class officeUserLoginTest extends officeTestData {
 
-    private static final String officeLoginEndPoint = OFFICE_LOGIN_END_POINT_URL;
+    private static PropertyManager properties = PropertyManager.getInstance();
+
+    private static final String officeLoginEndPoint = properties.getEndPointLoginOffice();
 
     @Test
     @Feature("01. TC Verify that the verified Office user can successfully login")
