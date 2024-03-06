@@ -4,7 +4,7 @@ import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Assert;
 
-public class officeTestData {
+public class officeLoginTestData {
 
     /********************************************************************************************
      TEST DATA THAT WE USE FOR OFFICE USERS

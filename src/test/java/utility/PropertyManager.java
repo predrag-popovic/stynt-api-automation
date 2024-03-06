@@ -10,6 +10,8 @@ public class PropertyManager {
     private String PROFESSIONAL_ENVIRONMENT_LOGIN;
     private String OFFICE_ENVIRONMENT_LOGIN;
 
+    private String OFFICE_USER_PROFILE;
+
     private PropertyManager() {
         loadData();
     }
@@ -43,14 +45,17 @@ public class PropertyManager {
          */
         PROFESSIONAL_ENVIRONMENT_LOGIN = prop.getProperty("PROFESSIONAL_LOGIN_END_POINT_URL");
         OFFICE_ENVIRONMENT_LOGIN = prop.getProperty("OFFICE_LOGIN_END_POINT_URL");
+        OFFICE_USER_PROFILE = prop.getProperty("OFFICE_USER_PROFILE_END_POINT_URL");
     }
 
     public String getEndPointLoginProfessional() {
         return PROFESSIONAL_ENVIRONMENT_LOGIN;
     }
-
     public String getEndPointLoginOffice() {
         return OFFICE_ENVIRONMENT_LOGIN;
+    }
+    public String getEndPointUserProfileOffice() {
+        return OFFICE_USER_PROFILE;
     }
 
 
