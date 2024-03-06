@@ -10,12 +10,12 @@ import org.json.JSONObject;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
-import data.login.officeTestData;
+import data.login.officeLoginTestData;
 import utility.PropertyManager;
 
 @Epic("Automate API for Office user login")
 
-public class officeUserLoginTest extends officeTestData {
+public class officeLoginTest extends officeLoginTestData {
 
     private static PropertyManager properties = PropertyManager.getInstance();
 

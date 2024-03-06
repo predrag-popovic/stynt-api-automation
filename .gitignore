@@ -16,3 +16,4 @@ target/
 **/.allure/
 **/allure-results/
 **/allure-report/
+README.md
