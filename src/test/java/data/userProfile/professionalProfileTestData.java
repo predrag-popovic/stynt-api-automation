@@ -29,7 +29,10 @@ public class professionalProfileTestData {
     /********************************************************************************************
      METHOD FOR VERIFICATION EXPECTED RESULT THAT WE GET FORM BODY
      ********************************************************************************************/
-    public static void verifyThatProfessionalGetUserProfileDataSuccessfully(Response officeSuccessfullyGetUserProfileData) {
-        Assert.assertEquals(200, officeSuccessfullyGetUserProfileData.statusCode());
+    public static void verifyThatProfessionalGetUserProfileDataSuccessfully(Response professionalSuccessfullyGetUserProfileData) {
+        Assert.assertEquals(200, professionalSuccessfullyGetUserProfileData.statusCode());
+        Assert.assertEquals("[50, 2]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.id"));
+        Assert.assertEquals("[CPR, RDH]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.name"));
+        Assert.assertEquals("[cpr, rdh]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.code"));
     }
 }
