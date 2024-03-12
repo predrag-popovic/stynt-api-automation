@@ -34,7 +34,7 @@ public class officeProfileTest extends officeProfileTestData {
 
     private static Response getResponseOfficeUserProfile(JSONObject requestParams) {
         Response officeUserProfile = given()
-                .header("Authorization", "Bearer " + "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJTdHludCBvZmZpY2UiLCJpZCI6IjM1N2VjN2M4LTYxMmEtNGU5MS1iZmI4LWE0NTVlMmM4NTlmYyIsImVtYWlsIjoicWF0ZXN0cWE3NStkYjFAZ21haWwuY29tIiwiaWF0IjoxNzA5NzI0NDU3LCJleHAiOjE3MTAwODQ0NTd9.ktOF4eB0Y5B4KAnR7x9N6ONCSjBWk3GkEapOg1RXcdk")
+                .header("Authorization", "Bearer " + OFFICE_BEARER_TOKEN)
                 .body(requestParams.toString())
                 .contentType(ContentType.JSON)
                 .when()
