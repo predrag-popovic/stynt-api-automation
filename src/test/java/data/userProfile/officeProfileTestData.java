@@ -9,7 +9,7 @@ public class officeProfileTestData {
     /********************************************************************************************
      TEST DATA THAT WE USE FOR OFFICE USERS
      ********************************************************************************************/
-    public static final String OFFICE_BEARER_TOKEN = "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJTdHludCBvZmZpY2UiLCJpZCI6ImJhMmZmYWY2LWQyNGUtNDMyMS1iY2NiLWEzY2Y3NGM1MTA3ZCIsImVtYWlsIjoicWF0ZXN0cWE3NStpbEBnbWFpbC5jb20iLCJpYXQiOjE3MDkyODg5NTEsImV4cCI6MTcwOTY0ODk1MX0.WcZYvj2hOmLCMHX4gfiN92igiuBXI_k29rdRnNUowFk";
+    public static final String OFFICE_BEARER_TOKEN = "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJTdHludCBvZmZpY2UiLCJpZCI6IjM1N2VjN2M4LTYxMmEtNGU5MS1iZmI4LWE0NTVlMmM4NTlmYyIsImVtYWlsIjoicWF0ZXN0cWE3NStkYjFAZ21haWwuY29tIiwiaWF0IjoxNzEwMTQzNzQ5LCJleHAiOjE3MTA1MDM3NDl9.2KKDmjZ9BkNiJi8QGFM9IMwz3_oVN5xVE23Kup3adao";
 
     /********************************************************************************************
      METHOD FOR SENDING PARAMETERS FOR CREDENTIALS
