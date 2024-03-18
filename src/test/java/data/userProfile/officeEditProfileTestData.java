@@ -3,7 +3,7 @@ package data.userProfile;
 import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class officeEditProfileTestData {
 
@@ -206,11 +206,11 @@ public class officeEditProfileTestData {
      METHOD FOR VERIFICATION EXPECTED RESULT THAT WE GET FORM BODY
      ********************************************************************************************/
     public static void verifyThatOfficeUserUpdatedProfileDataSuccessfully(Response officeEditUserProfile) {
-        Assert.assertEquals(200, officeEditUserProfile.statusCode());
+        Assertions.assertEquals(200, officeEditUserProfile.statusCode());
     }
     public static void verifyThatOfficeUserUpdatedProfileDataUnsuccessfully(Response officeEditUserProfile) {
-        Assert.assertEquals(400, officeEditUserProfile.statusCode());
-        Assert.assertEquals("Required field is missing", officeEditUserProfile.jsonPath().getString("message"));
+        Assertions.assertEquals(400, officeEditUserProfile.statusCode());
+        Assertions.assertEquals("Required field is missing", officeEditUserProfile.jsonPath().getString("message"));
     }
 
 }

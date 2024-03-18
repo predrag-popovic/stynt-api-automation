@@ -2,7 +2,7 @@ package data.userProfile;
 
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class professionalProfileTestData {
 
@@ -30,9 +30,9 @@ public class professionalProfileTestData {
      METHOD FOR VERIFICATION EXPECTED RESULT THAT WE GET FORM BODY
      ********************************************************************************************/
     public static void verifyThatProfessionalGetUserProfileDataSuccessfully(Response professionalSuccessfullyGetUserProfileData) {
-        Assert.assertEquals(200, professionalSuccessfullyGetUserProfileData.statusCode());
-        Assert.assertEquals("[50, 2]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.id"));
-        Assert.assertEquals("[CPR, RDH]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.name"));
-        Assert.assertEquals("[cpr, rdh]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.code"));
+        Assertions.assertEquals(200, professionalSuccessfullyGetUserProfileData.statusCode());
+        Assertions.assertEquals("[50, 2]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.id"));
+        Assertions.assertEquals("[CPR, RDH]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.name"));
+        Assertions.assertEquals("[cpr, rdh]", professionalSuccessfullyGetUserProfileData.jsonPath().getString("profile.usersLicences.primaryLicenceType.code"));
     }
 }

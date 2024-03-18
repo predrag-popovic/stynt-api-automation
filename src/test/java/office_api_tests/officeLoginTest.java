@@ -7,10 +7,10 @@ import io.qameta.allure.SeverityLevel;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
 import data.login.officeLoginTestData;
+import org.junit.jupiter.api.Test;
 import utility.PropertyManager;
 
 @Epic("Automate API for Office user login")

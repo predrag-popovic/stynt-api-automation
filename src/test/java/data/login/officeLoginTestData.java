@@ -2,7 +2,7 @@ package data.login;
 
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class officeLoginTestData {
 
@@ -63,10 +63,10 @@ public class officeLoginTestData {
      METHOD FOR VERIFICATION EXPECTED RESULT THAT WE GET FORM BODY
      ********************************************************************************************/
     public static void verifyThaOfficeLoginSuccessfully(Response officeSuccessfullyLogin) {
-        Assert.assertEquals(200, officeSuccessfullyLogin.statusCode());
-        Assert.assertEquals("true", officeSuccessfullyLogin.jsonPath().getString("success"));
+        Assertions.assertEquals(200, officeSuccessfullyLogin.statusCode());
+        Assertions.assertEquals("true", officeSuccessfullyLogin.jsonPath().getString("success"));
     }
     public static void verifyThatOfficeLoginUnsuccessfully(Response officeUnsuccessfullyLogin) {
-        Assert.assertEquals(401, officeUnsuccessfullyLogin.statusCode());
+        Assertions.assertEquals(401, officeUnsuccessfullyLogin.statusCode());
     }
 }

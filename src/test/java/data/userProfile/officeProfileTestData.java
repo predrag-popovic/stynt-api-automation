@@ -2,7 +2,7 @@ package data.userProfile;
 
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class officeProfileTestData {
 
@@ -22,9 +22,9 @@ public class officeProfileTestData {
      METHOD FOR VERIFICATION EXPECTED RESULT THAT WE GET FORM BODY
      ********************************************************************************************/
     public static void verifyThatOfficeGetUserProfileDataSuccessfully(Response officeSuccessfullyGetUserProfileData) {
-        Assert.assertEquals(200, officeSuccessfullyGetUserProfileData.statusCode());
-        Assert.assertEquals("Office DB Test 1", officeSuccessfullyGetUserProfileData.jsonPath().getString("load.name"));
-        Assert.assertEquals("CLIENT", officeSuccessfullyGetUserProfileData.jsonPath().getString("load.type"));
+        Assertions.assertEquals(200, officeSuccessfullyGetUserProfileData.statusCode());
+        Assertions.assertEquals("Office DB Test 1", officeSuccessfullyGetUserProfileData.jsonPath().getString("load.name"));
+        Assertions.assertEquals("CLIENT", officeSuccessfullyGetUserProfileData.jsonPath().getString("load.type"));
     }
 
 
