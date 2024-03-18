@@ -8,17 +8,22 @@ import io.qameta.allure.SeverityLevel;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Test;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import utility.PropertyManager;
 import static io.restassured.RestAssured.*;
 
 @Epic("Automate API for Professional user login")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class professionalUserLoginTest extends professionalTestData {
 
     private static PropertyManager properties = PropertyManager.getInstance();
     private static final String professionalLoginEndPoint = properties.getEndPointLoginProfessional();
 
     @Test
+    @Order(1)
     @Feature("01. TC Verify That The Verify Professional user can successfully login")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatTheVerifyProfessionalCanSuccessfullyLogin() {
@@ -32,6 +37,7 @@ public class professionalUserLoginTest extends professionalTestData {
     }
 
     @Test
+    @Order(2)
     @Feature("02.TC Verify that verified user can't login with empty email and password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatVerifiedUserCanNotLogInWithEmptyEmailAndPassword() {
@@ -45,6 +51,7 @@ public class professionalUserLoginTest extends professionalTestData {
     }
 
     @Test
+    @Order(3)
     @Feature("03.TC Verify that verified user can't log in with valid email and empty password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatVerifiedUserCanNotLogInWithValidEmailAndEmptyPassword() {
@@ -58,6 +65,7 @@ public class professionalUserLoginTest extends professionalTestData {
     }
 
     @Test
+    @Order(4)
     @Feature("04.TC Verify that verified user can't log in with empty email and valid password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatVerifiedUserCanNotLogInWithEmptyEmailAndValidPassword() {
@@ -71,6 +79,7 @@ public class professionalUserLoginTest extends professionalTestData {
     }
 
     @Test
+    @Order(5)
     @Feature("05.TC Verify that verified user can't log in with valid email and invalid password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatVerifiedUserCanNotLogInWithValidEmailAndInvalidPassword() {
@@ -84,6 +93,7 @@ public class professionalUserLoginTest extends professionalTestData {
     }
 
     @Test
+    @Order(6)
     @Feature("06.TC Verify that verified user can't log in with invalid email and valid password")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatVerifiedUserCanNotLogInWithInvalidEmailAndValidPassword() {

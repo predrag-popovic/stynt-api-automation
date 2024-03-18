@@ -1,5 +1,5 @@
 # Automation API Framework
-## MAVEN - JAVA - JUNIT 4 - REST ASSURE
+## MAVEN - JAVA - JUNIT 5 - REST ASSURE
 
 This framework example using JAVA programming language with integrated Rest Assure framework.
 Automatic test used Rest Assure for executing junit tests and also this
@@ -18,7 +18,7 @@ Automation Basic Framework in order to work properly uses a number of dependenci
 * [Maven](https://maven.apache.org/) - Apache Maven is a software project management and comprehension tool.
 * [Java JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) - For Java Developers. Includes a complete JRE plus tools for developing, debugging, and monitoring Java applications.
 * [RestAssure](https://rest-assured.io/) - Automation API framework.
-* [Junit4](https://junit.org/junit4/) - JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.
+* [Junit5](https://junit.org/junit5/docs/current/user-guide/) - JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.
 * [Allure report](https://allurereport.org/) - Allure is designed to be agnostic of specific programming languages or testing frameworks.
 
 ### Installation
@@ -30,7 +30,7 @@ Install the dependencies or put them in POM.xml file into your project:
 ```sh
 Dependencies list:
 [java JDK 17] - (https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) v17.0.10+
-[junit] - (https://mvnrepository.com/artifact/junit/junit) v4.12
+[junit] - (https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api) v5.10.1
 [REST Assured] - (https://mvnrepository.com/artifact/io.rest-assured/rest-assured) v5.4.0+
 [JSON Path] - (https://mvnrepository.com/artifact/io.rest-assured/json-path) v5.4.0+
 [XML Path] - (https://mvnrepository.com/artifact/io.rest-assured/xml-path) v5.4.0+

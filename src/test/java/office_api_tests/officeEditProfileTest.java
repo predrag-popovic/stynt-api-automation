@@ -8,9 +8,9 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import data.userProfile.officeEditProfileTestData;
+import org.junit.jupiter.api.Test;
 import utility.PropertyManager;
 
 @Epic("Automate API for edit Office user profile")
