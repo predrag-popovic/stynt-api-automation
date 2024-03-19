@@ -10,12 +10,14 @@ import io.restassured.response.Response;
 import org.json.JSONObject;
 import static io.restassured.RestAssured.given;
 import data.userProfile.officeEditProfileTestData;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import utility.PropertyManager;
 
 @Epic("Automate API for edit Office user profile")
-
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class officeEditProfileTest extends officeEditProfileTestData {
 
     private static PropertyManager properties = PropertyManager.getInstance();
@@ -23,6 +25,7 @@ public class officeEditProfileTest extends officeEditProfileTestData {
     private static final String officeLoginEndPoint = properties.getEndPointLoginOffice();
 
     @Test
+    @Order(1)
     @Feature("01. TC Verify that user can update the primary profile with valid data")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatUserCanUpdateProfileWithValidData() {
@@ -36,6 +39,7 @@ public class officeEditProfileTest extends officeEditProfileTestData {
         verifyThatOfficeUserUpdatedProfileDataSuccessfully(officeEditUserProfile);
     }
     @Test
+    @Order(2)
     @Feature("02. TC Verify that user can't update the primary profile with an empty 'practiceName'")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyThatUserCannotUpdateProfileWithEmptyPracticeName() {

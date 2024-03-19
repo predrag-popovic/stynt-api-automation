@@ -9,12 +9,16 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import utility.PropertyManager;
 
 import static io.restassured.RestAssured.given;
 
 @Epic("Automate API for Professional user profile")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class professionalProfileTest extends professionalProfileTestData {
 
     private static PropertyManager properties = PropertyManager.getInstance();
@@ -22,6 +26,7 @@ public class professionalProfileTest extends professionalProfileTestData {
     private static final String professionalUserProfileEndPoint = properties.getEndPointUserProfileProfessional();
 
     @Test
+    @Order(1)
     @Feature("01.TC Verify that the appropriate data is returned for the Professional user")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyUserProfileDataForProfessionalUser() {

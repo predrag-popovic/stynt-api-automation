@@ -13,11 +13,14 @@ import static data.login.officeLoginTestData.ParamsForValidCredentials;
 import static io.restassured.RestAssured.given;
 
 import data.userProfile.officeProfileTestData;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import utility.PropertyManager;
 
 @Epic("Automate API for Office user profile")
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class officeProfileTest extends officeProfileTestData {
 
     private static PropertyManager properties = PropertyManager.getInstance();
@@ -25,6 +28,7 @@ public class officeProfileTest extends officeProfileTestData {
     private static final String officeLoginEndPoint = properties.getEndPointLoginOffice();
 
     @Test
+    @Order(1)
     @Feature("01. TC Verify that the appropriate data is returned for the office user")
     @Severity(SeverityLevel.BLOCKER)
     public void verifyUserProfileDataForOfficeUser() {
