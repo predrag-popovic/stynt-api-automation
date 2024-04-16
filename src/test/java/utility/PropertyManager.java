@@ -43,7 +43,6 @@ public class PropertyManager {
         try {
             prop.load(this.getClass().getClassLoader().getResourceAsStream("config.properties"));
         } catch (IOException e) {
-            //System.out.println("Configuration properties file cannot be found");
             log.error("Configuration properties file cannot be found");
 
         }
