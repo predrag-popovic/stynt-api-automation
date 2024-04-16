@@ -3,6 +3,9 @@ package utility;
 import java.io.IOException;
 import java.util.Properties;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class PropertyManager {
 
     private static PropertyManager cInstance = null;
@@ -40,10 +43,10 @@ public class PropertyManager {
         try {
             prop.load(this.getClass().getClassLoader().getResourceAsStream("config.properties"));
         } catch (IOException e) {
-            System.out.println("Configuration properties file cannot be found");
-        }
+            //System.out.println("Configuration properties file cannot be found");
+            log.error("Configuration properties file cannot be found");
 
-        // *** Get properties from configuration.properties ***
+        }
 
         /**
          * Get URL of application environment and set the end point
